@@ -1,0 +1,42 @@
+body {
+	background-image: url(MSOffice.jpg);
+	background-position: center center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #5892cc;
+	font-family: Palatino;
+	border-style: dotted;
+	border-width: 2px;
+	border-color: blue;
+	padding: 10px 15px;
+	margin-bottom: 20px;
+	width: 250px;
+}
+
+p {
+	text-align: justify;
+	background-color: hsl(178, 43%, 71%);
+	font-style: italic;
+	padding: 20px;
+	border-top: 3px dashed black;
+	border-bottom: 3px double black;
+	border-left: 3px hidden black;
+	border-right: 3px aridge black;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body span{
+	font-style: italic;
+	font-weight: bold;
+	color: rgb(13, 42, 161);
+	margin-left: 2px;
+	margin-right: 5px;
+}

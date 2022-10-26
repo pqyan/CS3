@@ -1,5 +1,6 @@
 body {
 	background-image: linear-gradient(#9C640C, #2ECC71);
+		font-family: trebuchet ms;
 }
 
 #logo{
@@ -21,8 +22,7 @@ h1 {
 	text-align: center;
 	color: #2ECC71;
 	font-size: 50px;
-	margin-top: -2px;
-	margin-bottom: -2px;
+	margin: -10px;
 }
 
 h2 {

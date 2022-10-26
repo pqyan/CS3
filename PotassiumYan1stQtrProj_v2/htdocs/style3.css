@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	color: #2ECC71;
+	margin: 0px;
+}
+
+body {
+	background-color: #9C640C;
+}
+
+#main{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	top: 20px;
+	left: 10px;
+	width: 1250px;
+	z-index: 1;
+	margin-bottom: 5px;
+}
+
+body h1{
+	position: absolute;
+	top: 10px;
+	left: 490px;
+	z-index: 4;
+	margin: 5px;
+	letter-spacing: 3.5px;
+	font-size: 80px;
+	font-family: bodoni mt poster;
+}
+
+#logo{
+	position: absolute;
+	top: 100px;
+	left: 530px;
+	height: 150px;
+	width: 200px;
+	z-index: 2;
+}
+
+body h3 {
+	position: absolute;
+	top: 230px;
+	left: 500px;
+	z-index: 3;
+	font-size: 15px;
+	color: white;
+	font-weight: 5px;
+}
+
+#rts {
+	float: left;
+	width: 33%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#rts p {
+	text-align: center;
+}
+
+#rate {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mnd {
+	float: right;
+	width: 33%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#mnd p {
+	text-align: center;
+}
+
+#food {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#qna {
+	float: right;
+	width: 33%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#qna p {
+	text-align: center;
+}
+
+#quest {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	text-decoration: underline;
+	text-align: center;
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+h2:hover{
+	transition: transform 0.8s;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+#logotwo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 60px;
+	width: 100px;
+	line-height: 3px;
+}
+
+hr {
+	clear: both;
+}
+
+#abts p {
+	text-align: center;
+	font-size: 30px;
+	font-family: bodoni mt poster;
+	letter-spacing: 2px;
+	font-weight: 10px;
+}
+
+#abts h2 {
+	text-align: center;
+}
+
+#abts {
+	background-color: #935116;
+}
+
+p {
+	margin-top: 10px;
+}

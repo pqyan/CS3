@@ -11,7 +11,7 @@ header {
 }
 
 header h1 {
-	margin-top: 0;
+	margin-top: 0px;
 }
 
 header h2 {
@@ -25,5 +25,4 @@ article p {
 footer {
 	background-color: #D3D3D3;
 	margin-top: -13px;
-	margin-bottom: -13px;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Yan | Formative 6</title>
+		<style>
+			.link:link{
+				background-color: #1f618d;
+				text-decoration: none; 
+				border: double 6px; 
+				padding: 5px;
+			}
+				.link:visited{
+					background-color:#1f618d; 
+					color: white; 
+				}
+				.link:hover{
+					background-color: #5499c7; 
+					border: outset white 5px; 
+					text-decoration: underline; 
+				}
+				.link:active{
+					background-color: black; 
+				} 
+			
+			.linkk:link{
+				background-color: #1e8449 ;
+				text-decoration: none; 
+				border: double 6px; 
+				padding: 5px;
+			}
+				.linkk:visited{
+					background-color: #1e8449;
+					color: white; 
+				}
+				.linkk:hover{
+					background-color: #52be80; 
+					border: outset white 5px;
+					text-decoration: underline; 
+				}
+				.linkk:active{
+					background-color:black; 
+				} 
+			
+			div{
+				border: 5px dashed #154360; 
+				margin:  50px 1000px 0px 0px;
+				text-align: center; 
+				padding: 50px 50px 50px 50px; 
+			}
+			
+			div:target#div{
+				background-color:#1a5276; 
+				border: solid #2874a6 10px;
+				color: white;
+			}
+	
+			div:target#divv{
+				background-color: #a9dfbf; 
+				border: dotted green 10px; 
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#div" class="link"> Button 1 </a>
+		&nbsp; &nbsp;
+		<a href="#divv" class="linkk"> Button 2 </a>
+		<div id="div"> Div 1! </div>
+		<div id="divv"> Div 2! </div> 
+	</body>
+</html>

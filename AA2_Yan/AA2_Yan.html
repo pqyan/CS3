@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alternative Assessment 2</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#red{
+				position: relative;
+				top: 200px;
+				left: 25%;
+				border: 2px solid black;
+				border-radius: 10px;
+				background-color: white;
+				color: red;
+				display: inline-block;
+				padding: 50px;
+			}
+				#red:hover{
+					background-color: red; 
+					color: white;
+					padding: 100px;
+				}
+				#red:active{
+					background: url('sprite.png') no-repeat -424px -220px;
+					background-size: 840px 420px;
+					width: 100px;
+					height: 100px;
+					color: transparent;
+				} 
+			
+			#blue {
+				position: relative;
+				top: 200px;
+				left: 40%;
+				border: 2px solid black;
+				border-radius: 10px;
+				background-color: white;
+				color: blue;
+				display: inline-block;
+				padding: 50px;
+			}
+				#blue:hover{
+					background-color: blue; 
+					color: white; 
+					padding: 100px;
+				}
+				#blue:active{
+					background: url('sprite.png') no-repeat -635.5px -220px;
+					background-size: 840px 420px;
+					width: 100px;
+					height: 100px;
+					color: transparent;
+				} 
+		</style>
+	</head>
+	<body>
+		<div id="red"><p> RED </p></div>
+		<div id="blue"><p> BLUE </p></div>
+	</body>
+</html>

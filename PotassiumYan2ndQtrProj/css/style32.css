@@ -1,0 +1,199 @@
+@media screen and (max-width: 320px) { 
+
+	body {
+		background-image: linear-gradient(#9C640C, #2ECC71);
+		font-family: trebuchet ms;
+	}
+
+	#logo{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 90px;
+		width: 120px;
+	}
+
+	#top h1{
+		margin: 3px;
+		letter-spacing: 4px;
+		font-size: 40px;
+		font-family: trebuchet ms;
+		text-align: center;
+		color: #2ECC71;
+		font-size: 50px;
+		margin: -10px;
+	}
+
+	#top h2{
+		margin: 3px;
+		letter-spacing: 4px;
+		letter-spacing: 1.8px;
+		font-size: 40px;
+		font-family: baskerville old face;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	h2 {
+		color: #2ECC71;
+		font-size: 45px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	#rt {
+		margin-left: 358px;
+	}
+
+	#go ul li a{
+		text-decoration: none;
+		padding: 10px;
+		color: white;
+		font-size: 20px;
+	}
+
+	#go ul{
+		list-style-type: none;
+	}
+	#go ul li{
+		float: left;
+	}
+
+	#go {
+		display: flex;
+		overflow: auto;
+		padding: 5px 0;
+	}
+
+
+	#ml {
+		float: right;
+	}
+
+	#meal {
+		float: left;
+	}
+
+	#dr {
+		float: right;
+	}
+
+	#drink {
+		float: left;
+	}
+
+	#dlv h2{
+		text-decoration: none;
+		font-size: 40px;
+		color: black;
+	}
+
+	#dlv {
+		box-sizing: border-box;
+		margin: 0 0 0 0;
+	}
+
+	#foods {
+		box-sizing: border-box;
+		margin: 0 0 0 0;
+	}
+
+	article {
+		border: 3px solid white;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+		position: relative;
+		padding: 15px;
+		background-color: #0A3409;
+	}
+
+	#foods h2 {
+		border: 2px solid white;
+		position: relative;
+		top: -23px;
+		left: -18px;
+		width: 100px;
+		text-align: center;
+		margin-bottom: -25px;
+	}
+
+	#dlv h2 {
+		margin-top: -10px;
+		color: white;
+		font-size: 50px;
+	}
+
+	#dlv h4 {
+		margin-top: -10px;
+		color: red;
+		font-size: 15px; 
+	}
+
+	#mlh2 h2 {
+		padding-right: 25px;
+		padding-left: 10px;
+		background-color: #FD3A0F;
+		color: white;
+	}
+
+	#dsh2 h2 {
+		padding-right: 65px;
+		padding-left: 10px;
+		background-color: #FD3A0F;
+		color: white;
+	}
+
+	#drh2 h2 {
+		padding-right: 40px;
+		padding-left: 10px;
+		background-color: #FD3A0F;
+		color: white;
+	}
+
+	p {
+		color: #F7DAD4;
+	}
+
+	h3 {
+		color: #F7DAD4;
+	}
+
+	h5 {
+		color: white;
+		font-size: 20px;
+		margin-bottom: -15px;
+	}
+
+	#dlbotn {
+		width: 100px;
+		height: 40px;
+	}
+
+	#logotwo{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 60px;
+		width: 100px;
+		line-height: 3px;
+	}
+
+	#ftr h4 {
+		text-align: center;
+		font-size: 20px;
+		font-family: baskerville old face;
+		letter-spacing: 1px;
+		font-weight: 10px;
+		color: #9C640C;
+		margin-top: 2px;
+		margin-bottom: -10px;
+	}
+
+	#ftr p {
+		text-align: center;
+		color: #9C640C;
+		margin-bottom: 0px;
+	}
+
+}

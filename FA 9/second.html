@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Beautiful Eyes</title>
+		<script>
+			function eyesClosed() {
+				document.getElementById("image").src = "closeEyes.jpeg";
+			}
+			function eyesOpened() {
+				document.getElementById("image").src = "openEyes.jpeg";
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="eyesClosed()">Close Eyes</button>
+		<button onclick="eyesOpened()">Open Eyes</button>
+		<br><br>
+		<img id="image" src="closeEyes.jpeg" alt="Original Image">
+	</body>
+</html>

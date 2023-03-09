@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Formative 10</title>
+	</head>
+	<body>
+		<script>
+			var hunds;
+			var tens;
+			var ones;
+			var randBreak = Math.floor(Math.random() * 1000);
+			document.write("Randomly Generated Number: " + randBreak);
+			var numStrng = randBreak.toString();
+			
+			if ((randBreak < 100) && (randBreak > 10)) { //tens and ones
+				hunds = numStrng.charAt(-1) * 100;
+				tens = numStrng.charAt(0) * 10;
+				ones = numStrng.charAt(1);
+				document.write("<br>" + "Breakdown: " + hunds + ", " + tens + ", " + ones);
+			
+			} if (randBreak > 100) { //hundreds, tens, and ones
+				hunds = numStrng.charAt(0) * 100;
+				tens = numStrng.charAt(1) * 10;
+				ones = numStrng.charAt(2);
+				document.write("<br>" + "Breakdown: " + hunds + ", " + tens + ", " + ones);
+			
+			} if (randBreak < 10) { //ones
+				hunds = numStrng.charAt(-2) * 100;
+				tens = numStrng.charAt(-1) * 10;
+				ones = numStrng.charAt(0);
+				document.write("<br>" + "Breakdown: " + hunds + ", " + tens + ", " + ones);
+			}
+		</script>
+	</body>
+</html> 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Formative 11</title>
+	</head>
+	<body>
+		<script>
+			var aSide = prompt("How long is the FIRST side of the triangle?", "");
+			var bSide = prompt("How long is the SECOND side of the triangle?", "");
+			var cSide = prompt("How long is the LAST side of the triangle?", "");
+			
+			determineTriangle(aSide, bSide, cSide);
+			
+			function determineTriangle(aSide, bSide, cSide) {
+				if ((aSide == bSide) && (bSide == cSide)) {
+					alert("It's an EQUILATERAL Triangle!");
+				} else if ((aSide == bSide) || (bSide == cSide) || (cSide == aSide)) {
+					alert("It's an ISOSCELES Triangle!");
+				} else {
+					alert("It's an SCALENE Triangle!");
+				}
+			}
+			
+		</script>
+	</body>
+</html> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload = "refrs()"> <!---making a new OTP everytime the page is reloaded--->
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span><a href=""> New OTP </a></h2>
+    <button onclick = "real()"> Enter the OTP as shown above </button>
+    
+    <script>
+		var dgts;
+		var ranOtp;
+		var confirm;
+		function refrs(){
+			ranOtp = document.getElementById('otp');
+			dgts = "";
+			for (let i = 0; i < 6; i++) {
+				dgts += Math.floor(Math.random() * 10);
+			}
+			ranOtp.textContent = dgts; //pastes the OTP
+		}
+		
+		function real() {
+			ranOtp = document.getElementById("otp");
+			confirm = prompt("Enter the provided OTP:"); //asks the user for the provided OTP
+			if (confirm == dgts) {
+				window.open("https://youtu.be/YpnQjEq3MhM"); //when the entered OTP is equal to the provided OTP the webpage redirects to a youtube link
+			} else {
+				alert("You have entered the wrong OTP!"); //alerts the user when they entered the wrong OTP, and then provides another OTP
+				refrs();
+			}
+		
+		}
+    </script>
+</body>
+</html>

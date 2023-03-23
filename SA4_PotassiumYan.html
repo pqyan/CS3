@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Car Deprecation Calculator</title>
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+	<body>
+		<h1> Car Depreciation Calculator </h1>
+		<h2> Your Car Model: <span id="model"> </span></h2>
+		<h2> Car Cost: <span id="cost"> </span></h2>
+		<h2> Age of your Car: <span id="age"> </span></h2>
+		<h2> Good Condition?: <span id="condition"> </span></h2>
+		<h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+		
+		<button onclick="enterCar()"> Enter your Car information </button>
+		<script>
+			function enterCar() {
+				carmodel = prompt("Enter Car Model");
+				carcost = prompt("Enter Cost of the Car");
+				carage = prompt("How old is your car?");
+				good = confirm("In Good Condition? Ok for Yes / Cancel for No");
+				model.innerHTML = carmodel;
+				cost.innerHTML = carcost;
+				age.innerHTML = carage;
+				condition.innerHTML = (good) ? "Yes" : "No";      
+				computeMarketValue(parseFloat(cost), parseFloat(age), good);
+			}
+			
+			var newCost; 
+			var anotherCost;
+			var lastCost;
+			function computeMarketValue(cost, age, good) { //gets the input of cost, age, and good from the user and uses it in this function
+				if (carage > 10) {
+					if (good) {
+						currentvalue.innerHTML = "70,000";
+					}else { //the 10% off from the 70,000
+						currentvalue.innerHTML = 70000 * 0.90;
+					}
+				} else if (carage >= 8) {
+					if (good) {
+						currentvalue.innerHTML = "100,000";
+					}else { //the 10% off from the 100,000
+						currentvalue.innerHTML = 100000 * 0.90;
+					}
+				} else if (carage >= 5) {
+					if (good) { //75% off from the original cost of the car
+						anotherCost = carcost * 0.75;
+						newCost = carcost - anotherCost;
+						currentvalue.innerHTML = newCost;
+					}else {
+						anotherCost = carcost - (carcost * 0.75); //plus 10% off from the cost that has been cut off by 75%
+						newCost = anotherCost * 0.10;
+						lastCost = anotherCost - newCost;
+						currentvalue.innerHTML = lastCost;
+					}
+				} else if (carage < 5) {
+					if (good) { //the 50% off from the original cost of the car
+						anotherCost = carcost * 0.50; 
+						newCost = carcost - anotherCost;
+						currentvalue.innerHTML = newCost;
+					}else {
+						anotherCost = carcost - (carcost * 0.50); //plus 10% off from the cost that has been cut off by 60%
+						newCost = anotherCost * 0.10;
+						lastCost = anotherCost - newCost;
+						currentvalue.innerHTML = lastCost;
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>
+

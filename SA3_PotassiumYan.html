@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Choose Background Color</title>
+        <style>
+        	* { box-sizing: border-box; 
+            	font-family: arial; 
+                color: white;
+            }           
+            body {background:navy}
+            ul {
+            	list-style-type: none;
+                width: 100px;
+                padding: 0;
+                border: 1px solid black;
+                background: gray;
+            }
+            li {width: 100%;
+            	border-bottom: 1px solid black;
+                padding: 5px;
+            }
+            li:nth-child(3) {border:none}
+            a {	text-decoration:none;
+            	display:block;
+                width: 100%;
+            }
+            li:nth-child(1):hover {background:purple}
+            li:nth-child(2):hover {background:navy}
+            li:nth-child(3):hover {background:maroon}
+            
+        </style>
+	</head>
+	<body id = "body">
+		<h2> Choose Background Color </h2>
+        <ul> <!--onclicks calling the function colorBg()-->
+        	<li> <a href="#" onclick="colorChange('Purple')"> Purple </a></li>
+            <li> <a href="#" onclick="colorChange('Navy')"> Navy </a></li>
+            <li> <a href="#" onclick="colorChange('Maroon')"> Maroon </a></li>
+        </ul>
+        <script>
+			//depending on the link you choose, the 'color' changes (e.g. when you click purple, the 'color' becomes purple)
+			function colorChange(color) {
+				document.getElementById("body").style.backgroundColor = color; //changes the background color based on the link you chose
+			}
+        </script>
+	</body>
+</html>

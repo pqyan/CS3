@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Numerology</title>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+	<body>
+		<h1> Your Fortune is in your name </h1>
+		<h2> Your Name is: <span id="thename"> </span></h2>
+		<h2> Today's fortune: <span id="fortune"> </span></h2>
+		<button onclick = "fateName()"> Click here to enter your name </button>
+		
+		 <script>
+			function fateName() {
+				var name = prompt("Enter he name to know their fate:");
+				document.getElementById("thename").innerHTML = name;
+				
+				var lent = name.length; //counts the number of characters inputed as the user's name
+				var fate = lent; 
+				for (i = 1; i < 10; i++) {
+					(fate = (fate - (fate % 10)) / 10 + (fate % 10));
+					/*
+						adds the first digit of the length with the last degit
+						however, when the added digits exceeds 9, it will go back to 1
+					
+					*/
+				}
+				
+				switch (fate) { //the added digits gets evaluated and is so used to choose among these cases
+					case 1: 
+						document.getElementById("fortune").innerHTML = '"Work for what you love to do, and I will watch right over you." - Coduroy Dreams by Rex Orange County';
+						break;
+					case 2: 
+						document.getElementById("fortune").innerHTML = '"Sometimes it lasts in love, but sometimes it hurts instead." - Someone Like You by Adele';
+						break;
+					case 3: 
+						document.getElementById("fortune").innerHTML = '"If perfect is what you are searching for, then just stay the same." - Just the Way You Are by Bruno Mars';
+						break;
+					case 4: 
+						document.getElementById("fortune").innerHTML = '"No need to think about this mess; It goes away in time." - Doors by Ben & Ben';
+						break;
+					case 5: 
+						document.getElementById("fortune").innerHTML = '"No, no, no (no, no)." - Complicated by Avril Lavigne';
+						break;
+					case 6: 
+						document.getElementById("fortune").innerHTML = '"Hindi katahimikan ang mag liligtas sa iyo. Ang tanging kailangan ay marinig ang boses mo." - Sabel by Ben & Ben feat. KZ Tandingan';
+						break;
+					case 7: 
+						document.getElementById("fortune").innerHTML = '"Dagat ay sisisirin, kahit walang mapala." - Pagtingin by Ben & Ben';
+						break;
+					case 8: 
+						document.getElementById("fortune").innerHTML = '"We have got to let go of all our ghost. We both know we are not kids no more." - Send My Love (To Your New Lover) by Adele';
+						break;
+					case 9: 
+						document.getElementById("fortune").innerHTML = '"Magpahinga ka lang muna, huwag nang pigilin ang luha." - Magpahinga by Ben & Ben';
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

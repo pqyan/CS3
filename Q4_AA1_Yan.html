@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Genetic Coding</title>
+	</head>
+	<body>
+		<script>
+			const mrna = prompt("Enter mRNA sequence:").toUpperCase();
+			var startIndex = mrna.indexOf("AUG");
+			let aminoAcids = [];
+			let cdn = mrna.slice(startIndex, startIndex + 3);
+			aminoAcids.push(cdn);
+			var slice = ((mrna.length - startIndex)/3);
+			document.write("[");
+
+			if (startIndex !== -1) {
+				for (let i = 0; i < slice; i++) {
+					startIndex += 3;
+					if (aminoAcids[i] != "UAA" && aminoAcids[i] != "UAG" && aminoAcids[i] != "UGA") {
+						if (i != slice - 1) {
+							document.write(' "' + aminoAcids[i] + '" ,');
+							cdn = mrna.slice(startIndex, startIndex + 3);
+							aminoAcids.push(cdn);
+						} else {
+							document.write(' "' + aminoAcids[i] + '" ]');
+						}
+					} else if (aminoAcids[i] === "UAA" || aminoAcids[i] === "UAG" || aminoAcids[i] === "UGA") {
+						document.write(' "' + aminoAcids[i] + '" ]');
+						break;
+					}
+				}
+				
+				for (let i = 0; i < slice; i++) {
+					if (aminoAcids[i] === "AUG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Met");
+						
+					} else if (aminoAcids[i] === "UUU" || aminoAcids[i] === "UUC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Phe");
+						
+					} else if (aminoAcids[i] === "UUA" || aminoAcids[i] === "UUG" || aminoAcids[i] === "CUU" || aminoAcids[i] === "CUC" || aminoAcids[i] === "CUA" || aminoAcids[i] === "CUG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "leu");
+						
+					} else if (aminoAcids[i] === "AUU" || aminoAcids[i] === "AUC" || aminoAcids[i] === "AUA") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Ile");
+						
+					} else if (aminoAcids[i] === "GUU" || aminoAcids[i] === "GUC" || aminoAcids[i] === "GUA" || aminoAcids[i] === "GUG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Val");
+						
+					} else if (aminoAcids[i] === "UCU" || aminoAcids[i] === "UCC" || aminoAcids[i] === "UCA" || aminoAcids[i] === "UCG" || aminoAcids[i] === "AGU" || aminoAcids[i] === "AGC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Ser");
+						
+					} else if (aminoAcids[i] === "CCU" || aminoAcids[i] === "CCC" || aminoAcids[i] === "CCA" || aminoAcids[i] === "CCG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Pro");
+						
+					} else if (aminoAcids[i] === "ACU" || aminoAcids[i] === "ACC" || aminoAcids[i] === "ACA" || aminoAcids[i] === "ACG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Thr");
+						
+					} else if (aminoAcids[i] === "GCU" || aminoAcids[i] === "GCC" || aminoAcids[i] === "GCA" || aminoAcids[i] === "GCG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Ala");
+						
+					} else if (aminoAcids[i] === "UAU" || aminoAcids[i] === "UAC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Tyr");
+						
+					} else if (aminoAcids[i] === "CAU" || aminoAcids[i] === "CAC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "His");
+						
+					} else if (aminoAcids[i] === "CAA" || aminoAcids[i] === "CAG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Gln");
+						
+					} else if (aminoAcids[i] === "AAU" || aminoAcids[i] === "AAC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Asn");
+						
+					} else if (aminoAcids[i] === "AAA" || aminoAcids[i] === "AAG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Lys");
+						
+					} else if (aminoAcids[i] === "GAU" || aminoAcids[i] === "GAC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Asp");
+						
+					} else if (aminoAcids[i] === "GAA" || aminoAcids[i] === "GAG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Glu");
+						
+					} else if (aminoAcids[i] === "UGU" || aminoAcids[i] === "UGC") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Cys");
+						
+					} else if (aminoAcids[i] === "UGG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Trp");
+						
+					} else if (aminoAcids[i] === "CGU" || aminoAcids[i] === "CGC" || aminoAcids[i] === "CGA" || aminoAcids[i] === "CGG" || aminoAcids[i] === "AGA" || aminoAcids[i] === "AGG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Arg");
+						
+					} else if (aminoAcids[i] === "GGU" || aminoAcids[i] === "GGC" || aminoAcids[i] === "GGA" || aminoAcids[i] === "GGG") {
+						document.write("<br>" + aminoAcids[i] + " --> " + "Gly");
+						
+					} else {
+						document.write("<br>" + aminoAcids[i] + " --> " + "STOP");
+						break;
+						
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

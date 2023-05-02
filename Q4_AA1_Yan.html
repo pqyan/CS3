@@ -13,9 +13,9 @@
 			let cdn = mrna.slice(startIndex, startIndex + 3);
 			aminoAcids.push(cdn);
 			var slice = ((mrna.length - startIndex)/3);
-			document.write("[");
 
 			if (startIndex !== -1) {
+				document.write("[");
 				for (let i = 0; i < slice; i++) {
 					startIndex += 3;
 					if (aminoAcids[i] != "UAA" && aminoAcids[i] != "UAG" && aminoAcids[i] != "UGA") {
@@ -99,6 +99,8 @@
 						
 					}
 				}
+			} else {
+				alert("There is no starting codon.");
 			}
 		</script>
 	</body>

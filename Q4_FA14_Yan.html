@@ -171,7 +171,10 @@
 
 				output.style.display = 'block';
 			});
-
+			
+			form.addEventListener('reset', () => {
+				output.style.display = 'none';
+			});
 		</script>
 	</body>
 </html>

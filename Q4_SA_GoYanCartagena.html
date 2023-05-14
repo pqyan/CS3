@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>NCE English Reviewer</title>
+		<style>
+			body {
+				background-color: #fffec3;
+			}
+			
+			span {
+				text-decoration: underline;
+			}
+		  
+			header {
+				background-color: #4682B4;
+				color: white;
+				text-align: center;
+				padding: 20px;
+				margin-bottom: 20px;
+			}
+			
+			form {
+				width: 90%;
+				margin: 0 auto;
+			}
+			
+			form h3 {
+				font-size: 20px;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			
+			.questions {
+				font-size: 18px;
+				font-weight: bold;
+				margin-top: 20px;
+				margin-bottom: 10px;
+			}
+			
+			input[type="radio"] {
+				margin-bottom: 10px;
+			}
+			
+			label {
+				font-size: 16px;
+				margin-left: 5px;
+			}
+			
+			button[type="submit"],
+			button[type="reset"]{
+				background-color: #4682B4;
+				color: white;
+				font-size: 16px;
+				font-weight: bold;
+				border: none;
+				border-radius: 5px;
+				padding: 10px 20px;
+				cursor: pointer;
+				margin-top: 20px;
+			}
+			
+			button[type="submit"]:hover,
+			button[type="reset"]:hover {
+				background-color: #666;
+			}
+
+			.center {
+			  margin: 0;
+			  position: relative;
+			  top: 445%;
+			  left: 88.3%;
+			  transform: translate(-50%, -50%);
+			}
+						
+			form {
+				background-color: #a9cce3;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0,0,0,0.3);
+				padding: 20px;
+				margin: 20px auto;
+				max-width: 10000px;
+			}
+			
+			#score {
+				color: green;
+				font-size: 30px;
+				text-align: center;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		<h1>NCE English Quizzer</h1>
+		</header>
+		<form id="eTest" onsubmit="return uTest();">
+			<h3>Instruction: Pick the answer that is synonymous to the underlined world</h3>
+			<div class="question">
+				 1.) The secretary was praised for her <span>dexterity.</span>
+					</br>
+				  <input type="radio" name="q1" value="cooperation">
+					<label for="cooperation">A. Cooperation</label><br>
+				  <input type="radio" name="q1" value="efficiency">
+					<label for="efficiency">B. Efficiency</label><br>
+				  <input type="radio" name="q1" value="personality">
+					<label for="personality">C. Personality</label><br>
+				  <input type="radio" name="q1" value="skill">
+					<label for="skill">D. Skill</label>
+					<p id="u1"></p>
+			</div>
+			<br>
+			<div class="question">
+				2.) Her computer is <span>obsolete.</span>
+					</br>
+				  <input type="radio" name="q2" value="complicated">
+					<label for="complicated">A. Complicated</label><br>
+				  <input type="radio" name="q2" value="outdated">
+					<label for="outdated">B. Outdated</label><br>
+				  <input type="radio" name="q2" value="reliable">
+					<label for="reliable">C. Reliable</label><br>
+				  <input type="radio" name="q2" value="useless">
+					<label for="useless">D. Useless</label>
+					<p id="u2"></p>
+			</div>
+			<br>
+			<div class="question">
+				3.) The irrigation system <span> depleted </span> the water supply.
+					</br>
+				  <input type="radio" name="q3" value="exhausted">
+					<label for="exhausted">A. Exhausted</label><br>
+				  <input type="radio" name="q3" value="included">
+					<label for="included">B. Included</label><br>
+				  <input type="radio" name="q3" value="muddled">
+					<label for="muddled">C. Muddled</label><br>
+				  <input type="radio" name="q3" value="rejected">
+					<label for="rejected">D. Rejected</label>
+					<p id="u3"></p>
+			</div>
+			<br>
+			<div class="question">
+				4.) Parents must <span> instill </span> proper values in their children.
+					</br>
+				  <input type="radio" name="q4" value="forcefully teach">
+					<label for="forcefully">A. Forcefully teach</label><br>
+				  <input type="radio" name="q4" value="effectively restore">
+					<label for="effectively">B. Effectively restore</label><br>
+				  <input type="radio" name="q4" value="gradually impart">
+					<label for="gradually">C. Gradually impart</label><br>
+				  <input type="radio" name="q4" value="measure exactly">
+					<label for="measure">D. Measure exactly</label>
+					<p id="u4"></p>
+			</div>
+			<br>
+			<div class="question">
+				5.) He managed minimally his eating habits, sleeping patterns and working schedules.  Now, he is in <span> precarious </span> health.
+					</br>
+				  <input type="radio" name="q5" value="fit">
+					<label for="fit">A. Fit</label><br>
+				  <input type="radio" name="q5" value="good">
+					<label for="good">B. Good</label><br>
+				  <input type="radio" name="q5" value="healthy">
+					<label for="healthy">C. Healthy</label><br>
+				  <input type="radio" name="q5" value="dangerous">
+					<label for="dangerous">D. Dangerous</label>
+					<p id="u5"></p>
+			</div>
+			<br>
+			<div class="question">
+				6.) The cat ______ dead on the pavement.
+					<br>
+				  <input type="radio" name="q6" value="lie">
+					<label for="lie">A. Lie</label><br>
+				  <input type="radio" name="q6" value="lied">
+					<label for="lied">B. Lied</label><br>
+				  <input type="radio" name="q6" value="layed">
+					<label for="layed">C. Layed</label><br>
+				  <input type="radio" name="q6" value="lay">
+					<label for="lay">D. Lay</label>
+					<p id="u6"></p>
+			</div>
+			<br>
+			<div class="question">
+				7.) You have to pay your bills now; ______, you will be fined if you pay after the due date.
+					<br>
+				  <input type="radio" name="q7" value="moreover">
+					<label for="moreover">A. Moreover</label><br>
+				  <input type="radio" name="q7" value="however">
+					<label for="however">B. However</label><br>
+				  <input type="radio" name="q7" value="otherwise">
+					<label for="otherwise">C. Otherwise</label><br>
+				  <input type="radio" name="q7" value="likewise">
+					<label for="likewise">D. Likewise</label>
+					<p id="u7"></p>
+			</div>
+			<br>
+			<div class="question">
+				8.) He is ______ from taking the final examinations.
+					<br>
+				  <input type="radio" name="q8" value="accepted">
+					<label for="accepted">A. Accepted</label><br>
+				  <input type="radio" name="q8" value="excepted">
+					<label for="excepted">B. Excepted</label><br>
+				  <input type="radio" name="q8" value="exempted">
+					<label for="exempted">C. Exempted</label><br>
+				  <input type="radio" name="q8" value="intercepted">
+					<label for="intercepted">D. Intercepted</label>
+					<p id="u8"></p>
+			</div>
+			<br>
+			<div class="question">
+				9.) My opinion is ______ yours.
+					<br>
+				  <input type="radio" name="q9" value="different for">
+					<label for="for">A. Different for</label><br>
+				  <input type="radio" name="q9" value="different from">
+					<label for="from">B. Different from</label><br>
+				  <input type="radio" name="q9" value="different than">
+					<label for="than">C. Different than</label><br>
+				  <input type="radio" name="q9" value="different in">
+					<label for="in">D. Different in</label>
+					<p id="u9"></p>
+			</div>
+			<br>
+			<div class="question">
+				10.) We are all ______ to see the baby.
+					<br>
+				  <input type="radio" name="q10" value="anxious">
+					<label for="anxious">A. Anxious</label><br>
+				  <input type="radio" name="q10" value="sad">
+					<label for="sad">B. Sad</label><br>
+				  <input type="radio" name="q10" value="eager">
+					<label for="eager">C. Eager</label><br>
+				  <input type="radio" name="q10" value="downcast">
+					<label for="downcast">D. Downcast</label>
+					<p id="u10"></p>
+			</div>
+			<br>
+			<div class="question">
+				11.) Had I studied very well, I ___ rewarded with a vacation in the US
+					<br>
+				  <input type="radio" name="q11" value="was">
+					<label for="was">A. Was</label><br>
+				  <input type="radio" name="q11" value="would have been">
+					<label for="been">B. Would have been</label><br>
+				  <input type="radio" name="q11" value="will be">
+					<label for="will">C. Will be</label><br>
+				  <input type="radio" name="q11" value="would be">
+					<label for="would">D. Would be</label>
+					<p id="u11"></p>
+			</div>
+			<br>
+			<div class="question">
+				12.) When helping in the kitchen, I am always careful not to hurt _____.
+					<br>
+				  <input type="radio" name="q12" value="ourselves">
+					<label for="ourselves">A. Ourselves</label><br>
+				  <input type="radio" name="q12" value="myself">
+					<label for="myself">B. Myself</label><br>
+				  <input type="radio" name="q12" value="himself">
+					<label for="himself">C. Himself</label><br>
+				  <input type="radio" name="q12" value="herself">
+					<label for="herself">D. Herself</label>
+					<p id="u12"></p>
+			</div>
+			<br>
+			<div class="question">
+				13.) _____ was the weather like when you were on holiday?
+					<br>
+				  <input type="radio" name="q13" value="where">
+					<label for="where">A. Where</label><br>
+				  <input type="radio" name="q13" value="how">
+					<label for="how">B. How</label><br>
+				  <input type="radio" name="q13" value="when">
+					<label for="when">C. When</label><br>
+				  <input type="radio" name="q13" value="what">
+					<label for="what">D. What</label>
+					<p id="u13"></p>
+			</div>
+			<br>
+			<div class="question">
+				14.) ____ any further information, do not hesitate to contact me
+					<br>
+				  <input type="radio" name="q14" value="unless you need">
+					<label for="unless">A. Unless you need</label><br>
+				  <input type="radio" name="q14" value="you will need">
+					<label for="will">B. You will need</label><br>
+				  <input type="radio" name="q14" value="you should need">
+					<label for="youShould">C. You should need</label><br>
+				  <input type="radio" name="q14" value="should you need">
+					<label for="shouldYou">D. Should you need</label>
+					<p id="u14"></p>
+			</div>
+			<br>
+			<div class="question">
+				15.) It's not so much his looks I don't like ___ his inability to listen
+					<br>
+				  <input type="radio" name="q15" value="than">
+					<label for="than">A. Than</label><br>
+				  <input type="radio" name="q15" value="for">
+					<label for="for">B. For</label><br>
+				  <input type="radio" name="q15" value="more">
+					<label for="more">C. More</label><br>
+				  <input type="radio" name="q15" value="as">
+					<label for="As">D. As</label>
+					<p id="u15"></p>	
+			</div>
+
+			<h3>Inctructions: Input the word that would be appropriate to the corresponding analogy. Please input your answer in all lowercase.</h3>
+			<div class="question">
+				16.) Hot : cold :: fire : <input type="text" name="answer1">
+				<p id="u16"></p>
+			</div>
+				<br>
+			<div class="question">
+				17.) Book : read :: pen : <input type="text" name="answer2">
+				<p id="u17"></p>
+			</div>
+				<br>
+			<div class="question">
+				18.) Doctor : hospital :: teacher : <input type="text" name="answer3">
+				<p id="u18"></p>
+			</div>
+				<br>
+			<div class="question">
+				19.) Square : cube :: circle : <input type="text" name="answer4">
+				<p id="u19"></p>
+			</div>
+				<br>
+			<div class="question">
+				20.) Brother : sister :: nephew : <input type="text" name="answer5">
+				<p id="u20"></p>
+			</div>
+			<br>
+			<p id="score"></p>
+			
+			<div class="center">
+				<button type="submit">Submit Test</button>
+				<button type="reset">Reset Test</button>
+			</div>
+		</form>
+		<script>
+			const form = document.querySelector('form');
+			function uTest() {
+			  uScore = 0;
+			  if(eTest.q1.value == "skill") {
+				uScore++;
+				u1.innerHTML = "Your answer is correct!";
+				document.getElementById("u1").style.color = "green";
+			  } else {
+				u1.innerHTML = eTest.q1.value + " is wrong, the right answer is Skill!";
+				document.getElementById("u1").style.color = "red";
+				}
+			  if(eTest.q2.value == "outdated") {
+				uScore++;
+				u2.innerHTML = "Your answer is correct!";
+				document.getElementById("u2").style.color = "green";
+			  } else {
+				u2.innerHTML = eTest.q2.value + " is wrong, the right answer is Outdated!";
+				document.getElementById("u2").style.color = "red";
+				}
+			  if(eTest.q3.value == "exhausted") {
+				uScore++;
+				u3.innerHTML = "Your answer is correct!";
+				document.getElementById("u3").style.color = "green";
+			  } else {
+				u3.innerHTML = eTest.q3.value + " is wrong, the right answer is Exhausted!";
+				document.getElementById("u3").style.color = "red";
+				}
+			  if(eTest.q4.value == "gradually impart") {
+				uScore++;
+				u4.innerHTML = "Your answer is correct!";
+				document.getElementById("u4").style.color = "green";
+			  } else {
+				u4.innerHTML = eTest.q4.value + " is wrong, the right answer is Gradually Impart!";
+				document.getElementById("u4").style.color = "red";
+				}
+			  if(eTest.q5.value == "dangerous") {
+				uScore++;
+				u5.innerHTML = "Your answer is correct!";
+				document.getElementById("u5").style.color = "green";
+			  } else {
+				u5.innerHTML = eTest.q5.value + " is wrong, the right answer is Dangerous!";
+				document.getElementById("u5").style.color = "red";
+				}
+			  if(eTest.q6.value == "layed") {
+				uScore++;
+				u6.innerHTML = "Your answer is correct!";
+				document.getElementById("u6").style.color = "green";
+			  } else {
+				u6.innerHTML = eTest.q6.value + " is wrong, the right answer is Layed!";
+				document.getElementById("u6").style.color = "red";
+				}
+			  if(eTest.q7.value == "otherwise") {
+				uScore++;
+				u7.innerHTML = "Your answer is correct!";
+				document.getElementById("u7").style.color = "green";
+			  } else {
+				u7.innerHTML = eTest.q7.value + " is wrong, the right answer is Otherwise!";
+				document.getElementById("u7").style.color = "red";
+				}
+			  if(eTest.q8.value == "exempted") {
+				uScore++;
+				u8.innerHTML = "Your answer is correct!";
+				document.getElementById("u8").style.color = "green";
+			  } else {
+				u8.innerHTML = eTest.q8.value + " is wrong, the right answer is Exempted!";
+				document.getElementById("u8").style.color = "red";
+				}
+			  if(eTest.q9.value == "different from") {
+				uScore++;
+				u9.innerHTML = "Your answer is correct!";
+				document.getElementById("u9").style.color = "green";
+			  } else {
+				u9.innerHTML = eTest.q9.value + " is wrong, the right answer is Different From!";
+				document.getElementById("u9").style.color = "red";
+				}
+			  if(eTest.q10.value == "eager") {
+				uScore++;
+				u10.innerHTML = "Your answer is correct!";
+				document.getElementById("u10").style.color = "green";
+			  } else {
+				u10.innerHTML = eTest.q10.value + " is wrong, the right answer is Eager!";
+				document.getElementById("u10").style.color = "red";
+				}
+			  if(eTest.q11.value == "would have been") {
+				uScore++;
+				u11.innerHTML = "Your answer is correct!";
+				document.getElementById("u11").style.color = "green";
+			  } else {
+				u11.innerHTML = eTest.q11.value + " is wrong, the right answer is Would have been!";
+				document.getElementById("u11").style.color = "red";
+				}
+			  if(eTest.q12.value == "myself") {
+				uScore++;
+				u12.innerHTML = "Your answer is correct!";
+				document.getElementById("u12").style.color = "green";
+			  } else {
+				u12.innerHTML = eTest.q12.value + " is wrong, the right answer is Myself!";
+				document.getElementById("u12").style.color = "red";
+				}
+			  if(eTest.q13.value == "what") {
+				uScore++;
+				u13.innerHTML = "Your answer is correct!";
+				document.getElementById("u13").style.color = "green";
+			  } else {
+				u13.innerHTML = eTest.q13.value + " is wrong, the right answer is What!";
+				document.getElementById("u13").style.color = "red";
+				}
+			  if(eTest.q14.value == "should you need") {
+				uScore++;
+				u14.innerHTML = "Your answer is correct!";
+				document.getElementById("u14").style.color = "green";
+			  } else {
+				u14.innerHTML = eTest.q14.value + " is wrong, the right answer is Should you need!";
+				document.getElementById("u14").style.color = "red";
+				}
+			  if(eTest.q15.value == "as") {
+				uScore++;
+				u15.innerHTML = "Your answer is correct!";
+				document.getElementById("u15").style.color = "green";
+			  } else {
+				u15.innerHTML = eTest.q15.value + " is wrong, the right answer is As!";
+				document.getElementById("u15").style.color = "red";
+				}
+			  if(eTest.answer1.value == "ice") {
+				uScore++;
+				u16.innerHTML = "Your answer is correct!";
+				document.getElementById("u16").style.color = "green";
+			  } else {
+				u16.innerHTML = eTest.answer1.value + " is wrong, the right answer is ice!";
+				document.getElementById("u16").style.color = "red";
+				}
+			  if(eTest.answer2.value == "write") {
+				uScore++;
+				u17.innerHTML = "Your answer is correct!";
+				document.getElementById("u17").style.color = "green";
+				
+			  } else {
+				u17.innerHTML = eTest.answer2.value + " is wrong, the right answer is write!";
+				document.getElementById("u17").style.color = "red";
+				}
+			  if(eTest.answer3.value == "school") {
+				uScore++;
+				u18.innerHTML = "Your answer is correct!";
+				document.getElementById("u18").style.color = "green";
+			  } else {
+				u18.innerHTML = eTest.answer3.value + " is wrong, the right answer is school!";
+				document.getElementById("u18").style.color = "red";
+				}
+			  if(eTest.answer4.value == "sphere") {
+				uScore++;
+				u19.innerHTML = "Your answer is correct!";
+				document.getElementById("u19").style.color = "green";
+			  } else {
+				u19.innerHTML = eTest.answer4.value + " is wrong, the right answer is sphere!";
+				document.getElementById("u19").style.color = "red";
+				}
+			  if(eTest.answer5.value == "niece") {
+				uScore++;
+				u20.innerHTML = "Your answer is correct!";
+				document.getElementById("u20").style.color = "green";
+			  } else {
+				u20.innerHTML = eTest.answer5.value + " is wrong, the right answer is niece!";
+				document.getElementById("u20").style.color = "red";
+				}
+			  score.innerHTML = "Your score is " + uScore + "/20";
+			  return false;
+			}
+			
+			form.addEventListener('reset', () => {
+				output.style.display = 'none';
+			});
+		</script>
+	</body>
+</html>
